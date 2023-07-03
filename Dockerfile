@@ -2,9 +2,9 @@ FROM node:14-alpine AS sourceCompiler
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN yarn
 COPY . .
-RUN npm run build
+RUN yarn build
 
 FROM nginx:1.23.4-alpine
 RUN rm -rf /var/www/html/*

@@ -22,7 +22,7 @@ jobs:
       - name: Build and test
         run: |
           docker build -t reactjs-basic .
-          docker run reactjs-basic npm test
+          docker run reactjs-basic yarn test
 
       - name: Push image to Docker Hub
         uses: docker/build-push-action@v2
