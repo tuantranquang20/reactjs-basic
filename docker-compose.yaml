@@ -4,9 +4,7 @@ services:
     container_name: reactjs-basic
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile
     restart: always
     ports:
-      - 8080:3000
-    volumes:
-      - .:/app
+      - 8080:80
